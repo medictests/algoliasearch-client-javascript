@@ -11,6 +11,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/cache-in-memory.esm.js",
+  "module": "./dist/cache-in-memory.esm.js",
   "main": "index.js",
   "types": "dist/cache-in-memory.d.ts",
   "dependencies": {

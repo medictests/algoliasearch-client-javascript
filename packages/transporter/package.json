@@ -11,6 +11,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/transporter.esm.js",
+  "module": "./dist/transporter.esm.js",
   "main": "index.js",
   "types": "dist/transporter.d.ts",
   "dependencies": {

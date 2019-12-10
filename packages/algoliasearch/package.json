@@ -19,6 +19,7 @@
       "default": "./dist/algoliasearch.esm-browser.js"
     }
   },
+  "module": "./dist/algoliasearch.esm-browser.js",
   "main": "index.js",
   "jsdelivr": "./dist/algoliasearch.umd.js",
   "unpkg": "./dist/algoliasearch.umd.js",

@@ -11,6 +11,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/cache-browser-local-storage.esm.js",
+  "module": "./dist/cache-browser-local-storage.esm.js",
   "main": "index.js",
   "types": "dist/cache-browser-local-storage.d.ts",
   "dependencies": {

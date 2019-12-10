@@ -6,7 +6,6 @@ import fs from 'fs';
 import path from 'path';
 import babel from 'rollup-plugin-babel';
 import filesize from 'rollup-plugin-filesize';
-import builtins from 'rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
 import { terser } from 'rollup-plugin-terser';
 import ts from 'rollup-plugin-typescript2';
@@ -182,7 +181,6 @@ packagesConfig
           globals({
             global: true,
           }),
-          builtins(),
           ts({
             check: !hasTSChecked,
             tsconfig: path.resolve(__dirname, 'tsconfig.json'),

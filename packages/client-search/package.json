@@ -10,6 +10,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/client-search.esm.js",
+  "module": "./dist/client-search.esm.js",
   "main": "index.js",
   "types": "dist/client-search.d.ts",
   "dependencies": {

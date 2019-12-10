@@ -10,6 +10,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/client-analytics.esm.js",
+  "module": "./dist/client-analytics.esm.js",
   "main": "index.js",
   "types": "dist/client-analytics.d.ts",
   "dependencies": {

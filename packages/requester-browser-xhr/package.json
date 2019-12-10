@@ -11,6 +11,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/requester-browser-xhr.esm.js",
+  "module": "./dist/requester-browser-xhr.esm.js",
   "main": "index.js",
   "types": "dist/requester-browser-xhr.d.ts",
   "dependencies": {
