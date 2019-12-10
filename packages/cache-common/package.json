@@ -11,7 +11,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/cache-common.esm.js",
-  "module": "./dist/cache-common.esm.js",
   "main": "index.js",
+  "module": "./dist/cache-common.esm.js",
   "types": "dist/cache-common.d.ts"
 }

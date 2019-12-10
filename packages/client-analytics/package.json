@@ -10,8 +10,8 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/client-analytics.esm.js",
-  "module": "./dist/client-analytics.esm.js",
   "main": "index.js",
+  "module": "./dist/client-analytics.esm.js",
   "types": "dist/client-analytics.d.ts",
   "dependencies": {
     "@algolia/client-common": "4.0.0-beta.9",

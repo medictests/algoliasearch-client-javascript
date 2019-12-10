@@ -10,8 +10,8 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/client-search.esm.js",
-  "module": "./dist/client-search.esm.js",
   "main": "index.js",
+  "module": "./dist/client-search.esm.js",
   "types": "dist/client-search.d.ts",
   "dependencies": {
     "@algolia/client-common": "4.0.0-beta.9",

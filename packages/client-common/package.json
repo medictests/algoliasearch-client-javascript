@@ -10,7 +10,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/client-common.esm.js",
-  "module": "./dist/client-common.esm.js",
   "main": "index.js",
+  "module": "./dist/client-common.esm.js",
   "types": "dist/client-common.d.ts"
 }

@@ -11,7 +11,7 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/requester-common.esm.js",
-  "module": "./dist/requester-common.esm.js",
   "main": "index.js",
+  "module": "./dist/requester-common.esm.js",
   "types": "dist/requester-common.d.ts"
 }

@@ -11,8 +11,8 @@
   "sideEffects": false,
   "type": "module",
   "exports": "./dist/transporter.esm.js",
-  "module": "./dist/transporter.esm.js",
   "main": "index.js",
+  "module": "./dist/transporter.esm.js",
   "types": "dist/transporter.d.ts",
   "dependencies": {
     "@algolia/cache-common": "4.0.0-beta.9",
