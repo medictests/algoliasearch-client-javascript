@@ -38,7 +38,7 @@ const packagesConfig = [
     output: packageId,
     package: packageId,
     input: defaultInput,
-    formats: ['esm', 'cjs'],
+    formats: ['cjs', 'esm'],
   };
 });
 
@@ -46,7 +46,7 @@ packagesConfig.push({
   output: 'client-search',
   package: 'client-search',
   input: defaultInput,
-  formats: ['esm', 'cjs'],
+  formats: ['cjs', 'esm'],
   external: ['crypto'],
 });
 
@@ -55,7 +55,7 @@ packagesConfig.push({
     output: packageId,
     package: packageId,
     input: defaultInput,
-    formats: ['esm', 'cjs'],
+    formats: ['cjs', 'esm'],
     external: ['dom'],
   });
 });
@@ -64,27 +64,26 @@ packagesConfig.push({
   output: 'requester-node-http',
   package: 'requester-node-http',
   input: defaultInput,
-  formats: ['esm', 'cjs'],
-  external: ['https'],
+  formats: ['cjs', 'esm'],
+  external: ['https', 'http', 'url'],
 });
 
 packagesConfig.push({
   output: 'algoliasearch',
   package: 'algoliasearch',
   input: `src/builds/node.ts`,
-  formats: ['cjs'],
-  external: ['https'],
+  formats: ['cjs', 'esm'],
+});
+
+packagesConfig.push({
+  output: 'algoliasearch',
+  package: 'algoliasearch',
+  input: `src/builds/browser.ts`,
+  formats: ['esm-browser'],
+  external: ['dom'],
 });
 
 ['browser', 'browser-lite'].forEach(build => {
-  packagesConfig.push({
-    output: build === 'browser' ? 'algoliasearch' : 'algoliasearch-lite',
-    package: 'algoliasearch',
-    input: `src/builds/${build}.ts`,
-    formats: ['esm', 'esm-browser'],
-    external: ['dom'],
-  });
-
   packagesConfig.push({
     output: build === 'browser' ? 'algoliasearch' : 'algoliasearch-lite',
     package: 'algoliasearch',
@@ -121,6 +120,10 @@ packagesConfig
         file: `${packageConfig.output}.esm.js`,
         format: `es`,
       },
+      'esm-browser': {
+        file: `${packageConfig.output}.esm-browser.js`,
+        format: `es`,
+      },
       cjs: {
         file: `${packageConfig.output}.cjs.js`,
         format: `cjs`,
@@ -128,10 +131,6 @@ packagesConfig
       umd: {
         file: `${packageConfig.output}.umd.js`,
         format: `umd`,
-      },
-      'esm-browser': {
-        file: `${packageConfig.output}.esm-browser.js`,
-        format: `es`,
       },
     };
 
@@ -146,8 +145,7 @@ packagesConfig
 
       output.file = packageResolve(`dist/${output.file}`);
 
-      const isBrowserBuild = /\.umd.js$/.test(output.file) || /esm-browser.js$/.test(output.file);
-      const compressorPlugins = isBrowserBuild ? [terser()] : [];
+      const compressorPlugins = isUmdBuild ? [terser()] : [];
       const transpilerPlugins = isUmdBuild
         ? [
             babel({
@@ -170,7 +168,7 @@ packagesConfig
 
       let dependencies = require(packageResolve('package.json')).dependencies;
 
-      if (isBrowserBuild || dependencies === undefined) {
+      if (isUmdBuild || dependencies === undefined) {
         dependencies = [];
       }
 

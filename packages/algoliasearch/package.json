@@ -12,6 +12,13 @@
     "lite.d.ts"
   ],
   "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "node": "./dist/algoliasearch.esm.js",
+      "default": "./dist/algoliasearch.esm-browser.js"
+    }
+  },
   "main": "index.js",
   "jsdelivr": "./dist/algoliasearch.umd.js",
   "unpkg": "./dist/algoliasearch.umd.js",

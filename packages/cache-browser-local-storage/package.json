@@ -9,8 +9,9 @@
     "dist"
   ],
   "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/cache-browser-local-storage.esm.js",
   "main": "index.js",
-  "module": "dist/cache-browser-local-storage.esm.js",
   "types": "dist/cache-browser-local-storage.d.ts",
   "dependencies": {
     "@algolia/cache-common": "4.0.0-beta.9"

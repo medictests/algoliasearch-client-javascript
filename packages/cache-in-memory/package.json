@@ -9,8 +9,9 @@
     "dist"
   ],
   "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/cache-in-memory.esm.js",
   "main": "index.js",
-  "module": "dist/cache-in-memory.esm.js",
   "types": "dist/cache-in-memory.d.ts",
   "dependencies": {
     "@algolia/cache-common": "4.0.0-beta.9"

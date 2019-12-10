@@ -9,8 +9,9 @@
     "dist"
   ],
   "sideEffects": false,
-  "main": "index.ts",
-  "module": "dist/requester-node-http.esm.js",
+  "type": "module",
+  "exports": "./dist/requester-node-http.esm.js",
+  "main": "index.js",
   "types": "dist/requester-node-http.d.ts",
   "dependencies": {
     "@algolia/requester-common": "4.0.0-beta.9"

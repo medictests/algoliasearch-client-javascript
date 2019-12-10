@@ -9,8 +9,9 @@
     "dist"
   ],
   "sideEffects": false,
+  "type": "module",
+  "exports": "./dist/logger-console.esm.js",
   "main": "index.js",
-  "module": "dist/logger-console.esm.js",
   "types": "dist/logger-console.d.ts",
   "dependencies": {
     "@algolia/logger-common": "4.0.0-beta.9"
